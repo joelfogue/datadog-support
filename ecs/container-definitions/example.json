@@ -10,7 +10,7 @@
           "secretOptions": null,
           "options": {
             "dd_message_key": "log",
-            "apikey": "245ff72d2c6dd5321757f64eea040db7",
+            "apikey": "###################",
             "provider": "ecs",
             "dd_service": "firelens-test",
             "Host": "http-intake.logs.datadoghq.com",

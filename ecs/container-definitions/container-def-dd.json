@@ -29,7 +29,7 @@
           "logDriver": "awsfirelens",
           "options": {
             "Name": "datadog",
-            "apikey": "245ff72d2c6dd5321757f64eea040db7",
+            "apikey": "###################",
             "Host": "http-intake.logs.datadoghq.com",
             "dd_service": "firelens-test",
             "dd_source": "petals-and-turtles",
