@@ -1,0 +1,54 @@
+{
+  "version": 4,
+  "terraform_version": "0.14.3",
+  "serial": 66,
+  "lineage": "73188401-4051-fe56-2ddf-8a7f92ce4810",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "aws_ecs_service",
+      "name": "service",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "mode": "managed",
+      "type": "aws_launch_configuration",
+      "name": "lc",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:autoscaling:us-east-1:546627090205:launchConfiguration:4bbdc443-bf22-4767-abb0-84af9c127989:launchConfigurationName/test_ecs",
+            "associate_public_ip_address": true,
+            "ebs_block_device": [],
+            "ebs_optimized": false,
+            "enable_monitoring": true,
+            "ephemeral_block_device": [],
+            "iam_instance_profile": "terraform-20210413224757816500000001",
+            "id": "test_ecs",
+            "image_id": "ami-022ccdcc49ed341d0",
+            "instance_type": "t2.micro",
+            "key_name": "joel-keypair-dev",
+            "metadata_options": [],
+            "name": "test_ecs",
+            "name_prefix": null,
+            "placement_tenancy": null,
+            "root_block_device": [],
+            "security_groups": [
+              "sg-083c458ae5a2390b9"
+            ],
+            "spot_price": "",
+            "user_data": "33e2efdeb4194fafe68a0919ff94cdcb8377ad0f",
+            "user_data_base64": null,
+            "vpc_classic_link_id": "",
+            "vpc_classic_link_security_groups": []
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    }
+  ]
+}

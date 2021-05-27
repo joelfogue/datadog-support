@@ -1,0 +1,45 @@
+[
+  {
+    "name": "flowers-petals",
+    "image": "http://546627090205.dkr.ecr.us-east-1.amazonaws.com/turtle_ecr_repo:latest",
+    "cpu": 10,
+    "memory": 512,
+    "essential": true,
+    "portMappings": [
+      {
+        "containerPort": 80
+      }
+    ],  
+    "taskRoleArn": "arn:aws:iam::546627090205:role/turtleExecutionRole",
+    "executionRoleArn": "arn:aws:iam::546627090205:role/turtleExecutionRole",
+    "containerDefinitions": [
+      {
+        "essential": true,
+        "image": "amazon/aws-for-fluent-bit:latest",
+        "name": "log_router",
+        "firelensConfiguration": {
+          "type": "fluentbit",
+          "options": {
+            "enable-ecs-log-metadata": "true",
+            "config-file-type": "file",
+            "config-file-value": "/fluent-bit/configs/parse-json.conf"
+          }
+        },
+        "logConfiguration": {
+          "logDriver": "awsfirelens",
+          "options": {
+            "Name": "datadog",
+            "apikey": "245ff72d2c6dd5321757f64eea040db7",
+            "Host": "http-intake.logs.datadoghq.com",
+            "dd_service": "firelens-test",
+            "dd_source": "petals-and-turtles",
+            "dd_message_key": "log",
+            "dd_tags": "project:fluentbit",
+            "TLS": "on",
+            "provider": "ecs"
+          }
+        }
+      }
+    ]
+  }
+]

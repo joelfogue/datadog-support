@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  terraform:
+    image: hashicorp/terraform:0.14.3
+    working_dir: /infra
+    volumes:
+      - .:/infra
+    environment:
+        - AWS_SESSION_TOKEN
+        - AWS_ACCESS_KEY_ID
+        - AWS_SECRET_ACCESS_KEY
+        - AWS_DEFAULT_REGION=us-east-1
+  

@@ -1,0 +1,5 @@
+# https://docs.datadoghq.com/api/?lang=python#create-a-monitor
+#
+# METRIC ALERT: Useful for a continuous stream of data. Any metric sent to Datadog can be alerted upon if they cross a threshold over a given period of time.
+# EVENT ALERT:  Event monitors allow you to alert on events matching a search query.
+# LOG ALERT:    A logs monitor alerts when a specified type of log exceeds a user-defined threshold over a given period of time.
